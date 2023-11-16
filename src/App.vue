@@ -1,5 +1,6 @@
 <script setup>
 import { reactive } from 'vue';  
+import useRandom from "./Composables/useRandom"
 
 const color = reactive({
   red: 105,
@@ -7,10 +8,14 @@ const color = reactive({
   blue: 105
 })
 
+
 const SelectRandom = () => {
-  color.red = Math.floor(Math.random() * 255);
-  color.green = Math.floor(Math.random() * 255);
-  color.blue = Math.floor(Math.random() * 255);
+  let randomRed  = useRandom().red;
+  let randomGreen= useRandom().green;
+  let randomBlue = useRandom().blue;
+  color.red = randomRed;
+  color.green = randomGreen;
+  color.blue =randomBlue;
 }
 </script>
 
