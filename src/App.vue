@@ -1,16 +1,10 @@
 <script setup>
-import { ref, reactive } from 'vue';  
-
-// const color = ref({
-//   red: 0,
-//   blue: 0,
-//   green: 0
-// })
+import { reactive } from 'vue';  
 
 const color = reactive({
-  red: 0,
-  green: 0,
-  blue: 0
+  red: 105,
+  green: 105,
+  blue: 105
 })
 
 const SelectRandom = () => {
@@ -33,7 +27,6 @@ const SelectRandom = () => {
 
 <style scoped>
 main{
-  background-color: rgb(122, 50, 75);
   height: 100vh;
   display: flex;
   align-items: center;
